@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Roboto&display=swap");
+#text1 {
+  font-family: Poppins, Arial, sans-serif;
+}
+#text2 {
+  font-family: Montserrat;
+}
+#text3 {
+  font-family: Roboto;
+}

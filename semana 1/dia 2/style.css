@@ -1,0 +1,15 @@
+ul {
+  color: blue;
+}
+li {
+  font-size: 40px;
+}
+body {
+  background-image: url("https://s1.static.brasilescola.uol.com.br/be/2020/10/foguete.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+h1 {
+  border: 2px hidden yellow;
+}

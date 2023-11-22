@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    input{
+      width: 160px;
+    }
+    button{
+      width: 95px;
+      margin-top: 10px;
+    }
+   
+  </style>
+</head>
+<body>
+  
+  <h1>Escalação de time</h1>
+
+  <form class="form">
+    <h2>Escalar Jogador</h2>
+    <label for="posicao">Posição do jogador:</label>
+    <input type="text" name="posicao" id="posicao">
+
+    <label for="posicao">Nome do jogador:</label>
+    <input type="text" name="namePlayer" id="namePlayer">
+    
+    <label for="posicao">Número da camisa do jogador:</label>
+    <input type="number" name="camisa" id="camisa">
+    <br>
+    <button type="button" onclick="confirmacao()">Escalar</button>
+    <h2>Remover Jogador</h2>
+    
+      <label for="numberToRemove">Número:</label>
+      <input type="text" name="numberToRemove" id="numberToRemove">
+      <button onclick="removeplayer()">Remover Jogador</button>
+    
+  </form>
+
+  <section id="players-list"></section>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+body{
+  background-color: black;
+  color: white;
+}
+.styleClass{
+  color: aqua;
+  text-align: center;
+  margin-top: 400px;
+  font-size: 100px;
+}

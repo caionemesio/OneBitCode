@@ -1,0 +1,12 @@
+//Colors usa-se primeiro pois na pagina common usaremos as cores.
+
+@import "./variables/colors/colors.scss";
+
+//São comuns a todas as páginas
+@import "./variables/common/common.scss";
+
+//Cadastro
+@import "./pages/cadastro.scss";
+
+//login
+@import "./pages/login.scss";

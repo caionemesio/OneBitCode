@@ -1,0 +1,26 @@
+@import "./colors/colors.scss";
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $container-collor;
+  max-width: 470px;
+  p, label{
+    color: $primary-collor;
+  }
+  .checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 30px;
+  }
+  
+}
+.txt-footer{
+  color: $primary-collor;
+}
+footer,.button-enviar{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

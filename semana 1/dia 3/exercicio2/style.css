@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+body {
+  margin: 0px;
+}
+.post-container {
+  background-color: #fffafa;
+  width: 70%;
+  height: 70%;
+  margin: 0px auto 0px auto;
+  padding: 0px 0px 10px 0px;
+}
+.post {
+  margin-left: 30px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  padding-left: 40px;
+}
+.date {
+  font-family: roboto, arial, sans-serif;
+  color: #008080;
+}
+h1 {
+  font-family: Montserrat, arial, sans-serif;
+}
+.post-content {
+  font-family: sans-serif;
+  width: 90%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <h1 class="Titulo">Jogo da velha</h2>
+  <section class="content-jogadores">
+    <div class="info-jogadores">
+    <label for="jogador1">Jogador 1</label>
+    <input type="text" name="jogador1" id="jogador1" class="styleInput">
+    </div>
+    <div class="info-jogadores">
+    <label for="jogador2">Jogador 2</label>
+    <input type="text" name="jogador2" id="jogador2" class="styleInput">
+    </div>    
+    <button type="button" id="BtnStart">Começar</button>  
+  </section>
+  <h2>Vez de: <span id="turnPlayer"></span></h2>
+  <div class="jogoVelha">
+  <div class="keys">
+    <span class="cursor-pointer button" data-region="0.0"></span>
+    <span class="cursor-pointer button" data-region="0.1"></span>
+    <span class="cursor-pointer button" data-region="0.2"></span>
+    <span class="cursor-pointer button" data-region="1.0"></span>
+    <span class="cursor-pointer button" data-region="1.1"></span>
+    <span class="cursor-pointer button" data-region="1.2"></span>
+    <span class="cursor-pointer button" data-region="2.0"></span>
+    <span class="cursor-pointer button" data-region="2.1"></span>
+    <span class="cursor-pointer button" data-region="2.2"></span>
+  </div>
+  </div>
+
+  
+ 
+</body>
+</html>

@@ -1,0 +1,117 @@
+*{
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container0{
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+.menu-text{
+    color: $primary-color;
+    font-family:sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    &:hover{
+      color: $hoover-link;
+    }
+  }
+.menu{
+  padding-left: 15%;
+}
+.img-logo{
+  width: 235px;
+  }
+  .btn-container{
+    color: $primary-color;
+    border-radius: 4px;
+    border: solid 2px $primary-color;
+    font-size: 16px;
+    &:hover{
+      background-color: $hoover-link;
+      color:black;
+    }
+  }
+}
+.footer{
+  background-color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+  .copy-logo{
+    color: $copy-color;
+    font-size: 13px;
+  } 
+ a{
+  text-decoration: none;
+  color: $primary-color;
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;  
+ } 
+}
+//spaceflight e falcon9
+.text-information{
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+  .txt-email{
+    max-width: 820px;
+  }
+.link-email2{
+color: $item-table-color;
+text-decoration: none;
+cursor: pointer;
+&:hover{
+  color: rgba(255, 255, 255, 0.938);
+}
+}
+}
+.botoes{
+display: flex;
+flex-wrap: wrap;
+
+justify-content: center;
+gap: 20px;
+}
+@media (max-width:610px){
+  .botoes{
+    gap: 30px 0px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  .container0 .img-logo{
+    width: 180px;
+  }
+ 
+
+}
+@media (max-width: 359px) {
+
+  .container0 .img-logo{
+    width: 144px;
+  }
+
+}
+@media (max-width: 372px) {
+
+  .footer a{
+    font-size: 10px;
+  }
+  .footer .copy-logo{
+    font-size: 12px;
+  }
+}

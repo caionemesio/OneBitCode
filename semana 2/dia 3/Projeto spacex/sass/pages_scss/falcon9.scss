@@ -1,0 +1,182 @@
+.img-main{
+  background-image:url(../../image/falcon9/01.jpg);
+}
+.txt-img-main{
+  margin-top: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1{
+    font-size: 90px;
+    
+    font-family: 'Rubik', sans-serif;
+    
+  }
+  
+}
+.dados{
+  height: 40vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap;
+  
+  h2{
+    font-size: 90px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+.img-2-falcon{
+  background-image:url(../../image/falcon9/02.jpg);
+  background-size: cover;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 36%;
+  
+  .text-falcon9{
+    font-size: 22px;
+    height: 50vh;
+    width: 640px;
+    line-height:50px;
+    
+  }
+}
+.img-slide1{
+  background-image:url(../../image/falcon9/03.jpg);
+}
+.img-slide2{
+  background-image:url(../../image/falcon9/04.jpg);
+}
+.img-slide3{
+  background-image:url(../../image/falcon9/05.jpg);
+}
+.img-slide4{
+  background-image:url(../../image/falcon9/06.jpg);
+}
+.img-slide5{
+  background-image:url(../../image/falcon9/07.jpg);
+}
+
+.txt-slide1{
+  display: flex;
+  min-height: 100vh;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-top: 30%;
+  width: 500px;
+  .P-size{
+    font-size: 18px;
+  }
+
+}
+.img-merlin{
+  background-image:url(../../image/falcon9/08.jpg);
+
+}
+.merlin-text{
+  display: flex;
+  flex-direction: column;
+  margin-left: 13%;
+  padding-top: 10%;
+  width: 500px;
+}
+.img-c1{
+  background-image:url(../../image/falcon9/09.jpg);
+}
+.img-c2{
+  background-image:url(../../image/falcon9/10.jpg);
+}
+.img-c3{
+  background-image:url(../../image/falcon9/11.jpg);
+}
+.img-c4{
+  background-image:url(../../image/falcon9/12.jpg);
+}
+.img-c5{
+  background-image:url(../../image/falcon9/13.jpg);
+}
+.img-c6{
+
+  background-image:url(../../image/falcon9/14.jpg);
+}
+.legenda-txt{
+  p{
+    background-color: black;
+  }
+}
+@media (max-width:585px){
+  .img-2-falcon .text-falcon9{
+    
+    width: 420px;
+    
+  }
+  .merlin-text{
+    width: 400px;
+  }
+
+}
+@media (max-width:460px){
+  .container.txt-slide1{
+    width: 250px;
+    
+  }
+}
+@media (max-width:483px){
+  .txt-img-main h1{
+    font-size: 60px;
+  }
+  .merlin-text{
+    width: 250px;
+  }
+}
+@media (max-width:430px){
+  .img-2-falcon .text-falcon9{
+    
+    width: 300px;
+    line-height: 35px;
+    font-size: 18px;
+    
+  }
+}
+
+@media (max-width:775px){
+  .txt-slide1{
+    
+    width: 400px;
+   
+    .elemento-tabela{
+      font-size: 14px;
+    }
+  }
+  .dados{
+    
+    .bloco{
+      width: 100%;
+      padding-top: 20px;
+      
+      h2{
+        font-size: 60px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+    
+  }
+
+}
+@media (max-width:1050px){
+.txt-slide1{
+  margin-top: 70%;
+}
+.merlin-text{
+  padding-top: 40%;
+}
+}
