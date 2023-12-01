@@ -1,6 +1,12 @@
 {
-  "transactions": [],
+  "transactions": [
+    {
+      "name": "Caio",
+      "value": "10",
+      "id": 1
+    }
+  ],
   "balance": {
-    "value": 0
+    "value": 10
   }
 }
