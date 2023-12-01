@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "id": 2,
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Isaac"
+    },
+    {
+      "title": "Aprendendo com o padeiro caiao",
+      "author": "padeiro caiao",
+      "content": "Aqui você aprenderá como fazer um sonho rsrs",
+      "id": 3
+    },
+    {
+      "title": "salve seres humanos",
+      "author": "edukof",
+      "content": "acabou de spawnar um rayquaza shine aqui, infelizmente não deu tempo de gravar",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <form action="http://localhost:3000/transactions" method="post" class="form" id="formCadastro" >
+    <label for="name">Nome:</label>
+    <input type="text" id="name">
+
+    <label for="value">Valor</label>
+    <input type="number" id="value">
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <form action="http://localhost:3000/transactions" class="form" id="formEdit">
+    <label for="id_edit">Informe o Id que deseja alterar:</label>
+    <input type="number" id="id_edit">
+
+    <label for="name">Nome:</label>
+    <input type="text" id="name_edit">
+
+    <label for="value">Valor</label>
+    <input type="number" id="value_edit">
+    <button type="submit">Editar</button>
+  </form>
+
+  <div>
+    <label for="delete">Delete uma transação pelo ID</label>
+    <input type="number" id="delete">
+    <button id="button_delete">Deletar</button>
+  </div>
+
+  
+  <h2 id="text-balance">Saldo da Conta: $<span id="balance"></span></h2>
+  
+  <section id="showTransitions"></section>
+</body>
+</html>
