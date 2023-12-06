@@ -59,10 +59,15 @@ formPost.addEventListener('submit', async (ev) => {
   try {
     const newTransaction = {
       name: document.getElementById('name').value,
-      value: document.getElementById('value').value
+      value: parseFloat(document.getElementById('value').value)
     }
     if (!newTransaction.name.match(/[a-zA-Z]{2,}/)) {
       throw new Error("O nome precisa de ao menos 2 letras")
+    }
+    if (newTransaction.value === "") {
+      throw new Error("Você precisa definir o valor")
+    } else if (newTransaction.value === 0) {
+      throw new Error("O valor precisa ser diferente de 0")
     }
 
     const response = await fetch('http://localhost:3000/transactions', {
@@ -81,7 +86,12 @@ formPost.addEventListener('submit', async (ev) => {
     alterBalance(AddOperation)
     getBalance()
   } catch (err) {
-    alert(err.message)
+    if (err.message === "O nome precisa de ao menos 2 letras" || err.message === "Você precisa definir o valor" || err.message === "O valor precisa ser diferente de 0") {
+      alert(err.message)
+    } else {
+      console.error(err)
+    }
+
   }
 })
 
@@ -96,27 +106,44 @@ formEdit.addEventListener('submit', async (ev) => {
 
   const EditTransaction = {
     name: document.getElementById('name_edit').value,
-    value: document.getElementById('value_edit').value
+    value: parseFloat(document.getElementById('value_edit').value)
   }
 
-  const oldValueTransaction = document.getElementById(`transactionContent${idAlter}`).oldValue;//edited
+  try {
+    const oldValueTransaction = document.getElementById(`transactionContent${idAlter}`).oldValue;//edited
 
-  const response = await fetch(`http://localhost:3000/transactions/${idAlter}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(EditTransaction)
+    const response = await fetch(`http://localhost:3000/transactions/${idAlter}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(EditTransaction)
 
-  })
+    })
+    if (!EditTransaction.name.match(/[a-zA-Z]{2,}/)) {
+      throw new Error("O nome precisa de ao menos 2 letras")
+    }
+    if (EditTransaction.value === "") {
+      throw new Error("Você precisa definir o valor")
+    } else if (EditTransaction.value === 0) {
+      throw new Error("O valor precisa ser diferente de 0")
+    }
 
-  const editData = await response.json()
-  formEdit.reset()
-  operationBalance(EditTransaction)
-  operationBalance({ value: -parseFloat(oldValueTransaction) })
-  document.getElementById(`transactionContent${idAlter}`).oldValue = EditTransaction.value
-  editTransactions(editData)
-  getBalance()
+    const editData = await response.json()
+    formEdit.reset()
+    operationBalance(EditTransaction)
+    operationBalance({ value: -parseFloat(oldValueTransaction) })
+    document.getElementById(`transactionContent${idAlter}`).oldValue = EditTransaction.value
+    editTransactions(editData)
+    getBalance()
+  } catch (err) {
+    if (err.message === "O nome precisa de ao menos 2 letras" || err.message === "Você precisa definir o valor" || err.message === "O valor precisa ser diferente de 0") {
+      alert(err.message)
+    } else {
+      console.error(err)
+    }
+
+  }
 })
 
 async function editTransactions(editTransaction) {

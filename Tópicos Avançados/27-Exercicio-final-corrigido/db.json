@@ -1,0 +1,39 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "name": "Freela",
+      "amount": 300
+    },
+    {
+      "name": "agua mineral",
+      "amount": 5,
+      "id": 3
+    },
+    {
+      "name": "Conta de água",
+      "amount": -60,
+      "id": 4
+    },
+    {
+      "name": "Conta de luz",
+      "amount": -150,
+      "id": 5
+    },
+    {
+      "name": "internet2",
+      "amount": -50,
+      "id": 6
+    },
+    {
+      "name": "novo estagio",
+      "amount": 500,
+      "id": 7
+    },
+    {
+      "name": "aaaaa",
+      "amount": 10,
+      "id": 8
+    }
+  ]
+}

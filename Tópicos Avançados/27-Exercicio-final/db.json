@@ -1,12 +1,17 @@
 {
   "transactions": [
     {
-      "name": "Caio",
-      "value": "10",
+      "name": "renata",
+      "value": 100,
       "id": 1
+    },
+    {
+      "name": "caua",
+      "value": 50,
+      "id": 2
     }
   ],
   "balance": {
-    "value": 10
+    "value": 150
   }
 }
