@@ -40,7 +40,6 @@ async function getUserGit(name: string): Promise<GetApi> {
     throw error
   }
 }
-
 function findUser(name: string): GetApi | null {
   const userFound = users.find((user) => user.login === name)
   if (userFound === undefined) {
