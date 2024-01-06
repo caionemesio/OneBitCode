@@ -1,0 +1,15 @@
+.buttonBuy{
+  color: white;
+  background-color: black;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  &:hover{
+    color: black;
+    background-color: white;
+
+  }
+}
