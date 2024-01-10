@@ -1,0 +1,26 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.form #email{
+  height: 4rem;
+}
+.form input{
+  padding: 0.6rem;
+}
+.form textarea{
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+
+}
+
+
+.form button{
+  margin: 10px 0 ;
+  padding: 0.4rem;
+}
+

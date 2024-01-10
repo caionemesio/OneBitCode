@@ -1,0 +1,10 @@
+.container{
+  background-color: rgb(211, 210, 210);
+  margin: 2rem auto;
+  max-width: 400px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+ 
+
+}
