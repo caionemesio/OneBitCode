@@ -1,13 +1,10 @@
 import { useState } from "react";
 import InputForm from "./InputForm";
 import Styles from "./styles.module.css"
-export default function Form({onSubmit}){
+import { useProducts } from "../../contexts/ProductsContext.jsx";
+export default function Form(){
 
-  const [products, setProducts] = useState(() => {
-    const storedProduct = localStorage.getItem("obc-product-lib");
-    if (!storedProduct) return [];
-    return JSON.parse(storedProduct);
-  });
+  const {addProduct}= useProducts();
 
   const [name,setName]=useState("")
   const [quantity,setQuantity]=useState(0)
@@ -27,18 +24,7 @@ export default function Form({onSubmit}){
   }
     
   
-    const addProduct = ({ name, quantity, price, category, description }) => {
-  
-      const id = Math.floor(Math.random() * 1000000)
-      const product = { id, name, quantity, price, category, description }
-      setProducts(state => {
-        const newState = [...state, product]
-        localStorage.setItem("obc-product-lib", JSON.stringify(newState))
-        console.log("produto adicionado:" + product.name)
-        console.log("estado atual:" + newState)
-        return newState
-      })
-    }
+    
 
   return (
     <form onSubmit={handleSubmit} className={Styles.formClass}>
