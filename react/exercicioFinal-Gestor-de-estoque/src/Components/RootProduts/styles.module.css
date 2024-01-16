@@ -1,0 +1,27 @@
+.contentPage{
+  margin: 0px 2rem;
+}
+.links{
+  margin-left: 2rem;
+  display: flex;
+  gap: 20px;
+  
+  
+}
+hr{
+  margin:0px 2rem 0px 2rem;
+  border-color: gray;
+  padding: 0;
+
+}
+.inPage{
+  border-bottom: 0.2rem solid white;
+  padding-bottom: 0.5rem;
+  margin: 0;
+}
+.Title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin:20px 0px;
+}

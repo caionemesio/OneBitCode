@@ -1,0 +1,16 @@
+.header{
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.link{
+  display: flex;
+  gap: 20px;
+  
+}
+.link a{
+  color: white;
+}

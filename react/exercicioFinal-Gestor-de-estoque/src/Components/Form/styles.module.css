@@ -1,0 +1,50 @@
+.formClass{
+  margin: 2rem ;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  justify-content: center;
+}
+.formClass textarea{
+  
+  height: 100px;
+  padding: 8px;
+  background-color: black;
+  width: 100%;
+}
+
+.formClass input, select{
+  width: 200px;
+  height: 40px;
+  background-color: black;
+  border: none;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+
+.inputs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  gap: 32px;
+}
+.adjustLabel{
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  margin-top: 0.75rem; ;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.buttonSubmit{
+  margin-top: 0.75rem;
+  background-color: rgb(5, 89, 245);
+  color: white;
+  align-self: flex-start;
+}
