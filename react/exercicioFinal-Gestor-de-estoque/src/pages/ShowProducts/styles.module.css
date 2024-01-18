@@ -21,6 +21,7 @@
 .items{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #242424;
   padding: 0.5rem 0;
 }
@@ -36,6 +37,7 @@
 .buttons {
   display: flex;
   gap: 0.5rem;
+  /* background-color: rgb(238, 26, 26); */
 }
  
  

@@ -15,6 +15,7 @@ export default function Form(){
   const handleSubmit= (ev)=>{
     ev.preventDefault()
     addProduct({name,quantity,price,category,description})
+    alert(`Produto ${name} salvo com sucesso`)
     setName("")
     setQuantity(0)
     setPrice(0)

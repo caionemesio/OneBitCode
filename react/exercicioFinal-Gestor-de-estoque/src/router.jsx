@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Products from "./Components/RootProduts";
 import NewProduct from "./pages/newProduct";
 import ShowProducts from "./pages/ShowProducts/index.jsx";
+import Product from "./pages/Product/index.jsx"
 
 const router = createBrowserRouter([
   {
@@ -22,14 +23,10 @@ const router = createBrowserRouter([
             path:"/products/newProduct",
             element: <NewProduct/>
           },
-          // {
-          //   path:"/products/:productId",
-          //   element:<Product/>,
-          //   children: {
-          //     path:"/products/:updateProduct/edit",
-          //     element:<updateProduct/>
-          //   }         
-          // }
+          {
+            path:"/products/:productId",
+            element:<Product/>
+          }
         ]
       }
     ]
