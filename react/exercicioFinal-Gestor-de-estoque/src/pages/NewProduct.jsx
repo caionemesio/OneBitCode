@@ -1,10 +1,10 @@
 import Form from "../Components/Form";
+import { useProducts } from "../contexts/ProductsContext";
 
 export default function NewProduct(){
-  
-  return(
-    <>
-    <Form />
-    </>
+ const  {addProduct}= useProducts()
+ 
+  return( 
+    <Form onSubmit={addProduct}/>
   )
 }

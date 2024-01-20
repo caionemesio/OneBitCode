@@ -1,25 +1,41 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputForm from "./InputForm";
 import Styles from "./styles.module.css"
-import { useProducts } from "../../contexts/ProductsContext.jsx";
-export default function Form(){
+export default function Form({initialValues, onSubmit}){
 
-  const {addProduct}= useProducts();
 
   const [name,setName]=useState("")
   const [quantity,setQuantity]=useState(0)
   const [price, setPrice]= useState(0)
-  const [category,setCategoty]=useState("toys")
+  const [category,setCategory]=useState("toys")
   const [description,setDescription]=useState("")
+
+
+  useEffect(()=>{
+    if (initialValues){
+      setName(initialValues.name || "");
+      setQuantity(initialValues.quantity || 0);
+      setPrice(initialValues.price || 0);
+      setCategory(initialValues.category || "toys");
+      setDescription(initialValues.description || "");
+    }
+  },[initialValues])
 
   const handleSubmit= (ev)=>{
     ev.preventDefault()
-    addProduct({name,quantity,price,category,description})
-    alert(`Produto ${name} salvo com sucesso`)
+    // addProduct({name,quantity,price,category,description})
+    onSubmit({
+      name,
+      quantity,
+      price,
+      category,
+      description
+    })
+    
     setName("")
     setQuantity(0)
     setPrice(0)
-    setCategoty("toys")
+    setCategory("toys")
     setDescription("")
      
   }

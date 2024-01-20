@@ -24,7 +24,7 @@ export default function ShowProducts(){
             <p>{product.category}</p>
             <div className={Styles.buttons}>
               <SeeButton color="rgb(5, 89, 245)" productId={product.id}/>
-              <UpdateButton/>
+              <UpdateButton productId={product.id}/>
               <DeleteButton productId={product.id}/>
             </div>
           </div>

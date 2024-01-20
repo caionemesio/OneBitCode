@@ -2,23 +2,27 @@
   margin: 0px 2rem;
 }
 .links{
-  margin-left: 2rem;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   
   
 }
+.links a{
+  padding: 0px 0.8rem 0.5rem 0.8rem;
+}
 hr{
-  margin:0px 2rem 0px 2rem;
+  margin:0px;
   border-color: gray;
   padding: 0;
 
 }
+
 .inPage{
   border-bottom: 0.2rem solid white;
-  padding-bottom: 0.5rem;
+  padding: 0px 0.8rem 0.5rem 0.8rem;
   margin: 0;
 }
+
 .Title{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;

@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext  } from "react";
 
 const ProductsContext = createContext()
 
@@ -10,15 +10,15 @@ export const ProductsProvider = ({ children }) => {
   });
 
   const addProduct = ({ name, quantity, price, category, description }) => {
-
     const id = Math.floor(Math.random() * 1000000)
-    const product = { id, name, quantity, price, category, description }
+    const date= new Date()
+    const product = { id, name, quantity, price, category, description, date }
     setProducts(state => {
       const newState = [...state, product]
       localStorage.setItem("obc-product-lib", JSON.stringify(newState))
-      console.log("produto adicionado:" + product.name)
-      console.log("estado atual:" + newState)
+      alert(`Produto ${name} adicionado com sucesso`)
       return newState
+      
     })
   }
   return (

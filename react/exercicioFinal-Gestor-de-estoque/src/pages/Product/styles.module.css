@@ -1,3 +1,15 @@
-headContent{
+.headContent{
     display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.infoProduct{
+    display: flex;
+    gap: 30px;
+    
+}
+.infoProduct p{
+    background-color: rgba(20, 20, 20, 0.685);
+    padding: 1rem;
+    
 }

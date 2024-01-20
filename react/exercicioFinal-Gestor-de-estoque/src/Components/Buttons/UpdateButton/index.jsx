@@ -1,7 +1,12 @@
-export default function UpdateButton(){
+import { Link } from "react-router-dom"
+
+export default function UpdateButton({productId}){
+
     return (
         <button style={{backgroundColor:"white"}}>
-                  Atualizar            
+            <Link to={`/products/${productId}/update`} style={{ color:"black"}}>
+                Atualizar    
+            </Link>                  
         </button>
     )
 }

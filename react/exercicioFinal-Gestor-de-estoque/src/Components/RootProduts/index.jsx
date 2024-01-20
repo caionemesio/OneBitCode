@@ -6,7 +6,7 @@ export default function RootProducts(){
     <section className={Styles.contentPage}>
       <h2 className={Styles.Title}>Stock Items</h2>
       <div className={Styles.links}>
-      <Link to="/products" className={location.pathname ==="/products" ? Styles.inPage: ""}>Todos os itens</Link>
+      <Link to="/products"  className={location.pathname ==="/products" ? Styles.inPage: ""}>Todos os itens</Link>
       <Link to="/products/newProduct" className={location.pathname ==="/products/newProduct" ? Styles.inPage: ""}>Novo Item</Link>
       </div>
       <hr />
