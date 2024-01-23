@@ -12,3 +12,30 @@
   align-items: center;
   
 }
+.contents{ 
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0rem 2rem;
+}
+.RecentsProductsHeader, .FinishingProductsHeader {
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.685);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4rem;
+  padding-left: 1rem ;
+}
+.ProductsContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 4rem 2rem 1rem;
+  
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
