@@ -1,4 +1,4 @@
-import { createContext, useState, useContext  } from "react";
+import { createContext, useState, useContext } from "react";
 
 const ProductsContext = createContext()
 
@@ -6,13 +6,25 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState(() => {
     const storedProduct = localStorage.getItem("obc-product-lib");
     if (!storedProduct) return [];
-    return JSON.parse(storedProduct);
+    try {
+      return JSON.parse(storedProduct);
+    } catch (error) {
+      console.error("Error parsing stored product:", error);
+      return [];
+    }
   });
+
+
+  const [updateDate, setUpdateDate] = useState("");
+  
+
+ 
 
   const addProduct = ({ name, quantity, price, category, description }) => {
     const id = Math.floor(Math.random() * 1000000)
-    const date= new Date()
+    const date= new Date().toLocaleString()
     const product = { id, name, quantity, price, category, description, date }
+    setUpdateDate(null)
     setProducts(state => {
       const newState = [...state, product]
       localStorage.setItem("obc-product-lib", JSON.stringify(newState))
@@ -22,7 +34,7 @@ export const ProductsProvider = ({ children }) => {
     })
   }
   return (
-    <ProductsContext.Provider value={{ products,setProducts, addProduct }}>
+    <ProductsContext.Provider value={{ products,setProducts, addProduct,updateDate,setUpdateDate }}>
       {children}
     </ProductsContext.Provider>
   )

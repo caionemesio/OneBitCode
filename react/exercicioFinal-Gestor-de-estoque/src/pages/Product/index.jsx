@@ -3,19 +3,28 @@ import { useProducts } from "../../contexts/ProductsContext";
 import UpdateButton from "../../Components/Buttons/UpdateButton";
 import DeleteButton from "../../Components/Buttons/DeleteButton";
 import Styles from "./styles.module.css"
+import { useRef } from "react";
 
 export default function Product(){
     const {productId}=useParams()   
-    const {products}= useProducts()
+    const {products, updateDate,setUpdateDate  }= useProducts()
+    
     const product = products.find(p=>p.id===+productId)
-    console.log(product.date)
+
+    const creationDateRef= useRef(product.date)
+
+    const storedUpdateDate = localStorage.getItem(`obc-update-date-${productId}`);
+    if (storedUpdateDate) {
+      setUpdateDate(JSON.parse(storedUpdateDate));
+    }
+
 
     if (!product){
         return(
             <h2>Opss. Não encontramos esse produto :/</h2>
         )
     }
-
+    console.log(product.date)
   return(
     <section>
        <div className={Styles.headContent}>
@@ -29,8 +38,8 @@ export default function Product(){
             <p>Preço: R$ {product.price}</p>
         </div>
         <p>{product.description}</p>
-        <p>Cadastrado em: {product.date.toLocaleString()}</p>
-        {product.updateDate && <p>Atualizado em: {product.updateDate.toLocaleString()}</p>}
+        <p>Cadastrado em: {creationDateRef.current}</p>
+    {updateDate && <p>Atualizado em: {updateDate}</p>} 
     </section>
   )
 }

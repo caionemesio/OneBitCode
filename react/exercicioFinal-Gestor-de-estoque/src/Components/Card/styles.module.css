@@ -1,0 +1,14 @@
+.cardContent{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(20, 20, 20, 0.685);
+  padding: 0rem 1rem 2rem 2rem;
+
+}
+.quantity{
+  text-align: center;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+}
