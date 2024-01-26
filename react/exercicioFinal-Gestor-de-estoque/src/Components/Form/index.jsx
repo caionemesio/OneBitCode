@@ -7,7 +7,7 @@ export default function Form({initialValues, onSubmit}){
   const [name,setName]=useState("")
   const [quantity,setQuantity]=useState(0)
   const [price, setPrice]= useState(0)
-  const [category,setCategory]=useState("toys")
+  const [category,setCategory]=useState("Brinquedos")
   const [description,setDescription]=useState("")
 
 
@@ -16,7 +16,7 @@ export default function Form({initialValues, onSubmit}){
       setName(initialValues.name || "");
       setQuantity(initialValues.quantity || 0);
       setPrice(initialValues.price || 0);
-      setCategory(initialValues.category || "toys");
+      setCategory(initialValues.category || "Brinquedos");
       setDescription(initialValues.description || "");
     }
   },[initialValues])
@@ -35,7 +35,7 @@ export default function Form({initialValues, onSubmit}){
     setName("")
     setQuantity(0)
     setPrice(0)
-    setCategory("toys")
+    setCategory("Brinquedos")
     setDescription("")
      
   }
@@ -52,12 +52,13 @@ export default function Form({initialValues, onSubmit}){
         <div className={Styles.adjustLabel}>
           <label htmlFor="category">Categoria</label>
             <select name="category"
+            required
             id="category"
             value={category}
-            onChange={(ev)=>setCategoty(ev.target.value)}
+            onChange={(ev)=>setCategory(ev.target.value)}
               >
-              <option value="toys">Brinquedos</option>
-              <option value="games">Jogos</option>
+              <option value="Brinquedos">Brinquedos</option>
+              <option value="Jogos">Jogos</option>
             </select>
         </div>
       </div>

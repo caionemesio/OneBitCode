@@ -57,8 +57,8 @@ export default function Home(){
       <div className={Styles.ProductsContent}>
         {finishProducts.map((product)=>(
           <div key={product.id} className={Styles.items}>
-            <p>{product.name}</p>
-            <p>{product.quantity}</p>
+            <p style={{width:"116.28px"}}>{product.name}</p>
+            <p  style={{width:"32.25px", paddingLeft:"2rem"}}>{product.quantity}</p>
             <SeeButton productId={product.id} backgroundColor="#ffff" color="#000000"/>
           </div>
         ))}

@@ -7,6 +7,7 @@ export default function InputForm({id,label,type,value,setValue}){
        type={type} 
        value={value}
        onChange={(ev)=>setValue(ev.target.value)}
+       required
        />
     </div>
   )

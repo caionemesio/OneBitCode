@@ -9,19 +9,19 @@ export default function ShowProducts(){
   return(
     <div className={Styles.container}>
       <div className={Styles.header}>
-        <p>ID</p>
-        <p>Nome</p>
+        <p style={{width:"70px"}}>ID</p>
+        <p style={{width:"70px"}}>Nome</p>
         <p >Em Estoque</p>
         <p >Categoria</p>
-        <p >Ações</p>
+        <p style={{width:"281.11px"}}>Ações</p>
       </div>
       <div className={Styles.content}>
         {products.map((product)=>(
           <div key={product.id} className={Styles.items}>
-            <p>{product.id}</p>
-            <p>{product.name}</p>
-            <p>{product.quantity}</p>
-            <p>{product.category}</p>
+            <p style={{width:"70px"}}>{product.id}</p>
+            <p style={{width:"70px"}}>{product.name}</p>
+            <p style={{width:"89.55px"}}>{product.quantity}</p>
+            <p style={{width:"73.78px"}}>{product.category}</p>
             <div className={Styles.buttons}>
               <SeeButton color='#000000' backgroundColor="rgb(5, 89, 245)" productId={product.id}/>
               <UpdateButton productId={product.id}/>

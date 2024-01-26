@@ -24,9 +24,11 @@ export const ProductsProvider = ({ children }) => {
     const id = Math.floor(Math.random() * 1000000)
     const date= new Date().toLocaleString()
     const product = { id, name, quantity, price, category, description, date }
-    setUpdateDate(null)
+    setTimeout(() => {
+      setUpdateDate(null);
+    }, 0);
     setProducts(state => {
-      const newState = [...state, product]
+      const newState = [product,...state ]
       localStorage.setItem("obc-product-lib", JSON.stringify(newState))
       alert(`Produto ${name} adicionado com sucesso`)
       return newState
